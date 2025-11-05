@@ -1,0 +1,4 @@
+3. Prepare script to add unique constraint to any one column
+
+ALTER TABLE employees
+ADD CONSTRAINT unique_emp_name UNIQUE (emp_name);
