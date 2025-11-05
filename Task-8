@@ -1,0 +1,6 @@
+8. Prepare a INNER JOIN query between table1 and table2
+
+SELECT e.emp_name, d.dept_name
+FROM employees e
+INNER JOIN departments d
+ON e.dept_id = d.dept_id;
