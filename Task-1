@@ -1,0 +1,12 @@
+1. Prepare script to create table1 and table2 with primary key
+
+CREATE TABLE departments (
+    dept_id SERIAL PRIMARY KEY,
+    dept_name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE employees (
+    emp_id SERIAL PRIMARY KEY,
+    emp_name VARCHAR(50) NOT NULL,
+    dept_id INT
+);
