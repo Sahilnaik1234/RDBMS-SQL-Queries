@@ -1,0 +1,30 @@
+10. Prepare 5 insert and update statements on table 1, with COMMIT and ROLLBACK in between queries.
+
+-- Start transaction--
+BEGIN;
+
+-- Insert statements---
+INSERT INTO employees (emp_name, dept_id) VALUES ('Ian', 2);
+INSERT INTO employees (emp_name, dept_id) VALUES ('Jack', 3);
+
+-- Update statement---
+UPDATE employees SET dept_id = 4 WHERE emp_name = 'Alice';
+
+-- Rollback last changes----
+ROLLBACK;
+
+-- Check current table-----
+SELECT * FROM employees;
+
+-- Start another transaction----
+BEGIN;
+
+-- Insert again----
+INSERT INTO employees (emp_name, dept_id) VALUES ('Ian', 2);
+INSERT INTO employees (emp_name, dept_id) VALUES ('Jack', 3);
+
+-- Update again------
+UPDATE employees SET dept_id = 4 WHERE emp_name = 'Alice';
+
+-- Commit this time-----
+COMMIT;
